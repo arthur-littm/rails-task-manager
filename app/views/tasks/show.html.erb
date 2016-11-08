@@ -1,0 +1,14 @@
+<div class="container">
+<h1>Show</h1>
+<h4><%= @task.name %></h4>
+<p><%= @task.description %></p>
+<p>Created at: <%= @task.created_at %></p>
+<p><% if @task.completed == false %>
+  <%="Uncompleted"%>
+<% else %>
+  <%="Completed"%>
+<% end %>
+</p>
+
+<%= link_to("All tasks", tasks_path)%>
+</div>
